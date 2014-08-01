@@ -18,6 +18,7 @@
 @implementation ViewController
 @synthesize queryStringField;
 @synthesize textInputView;
+@synthesize slLuncher;
 
 - (void)viewDidLoad
 {
@@ -33,6 +34,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(dictationRecognitionFailed:)
                                                  name:VNDictationRecognitionFailedNotification object:nil];
+    self.slLuncher = [[SLLauncher alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +60,7 @@
 {
     ResultViewController *resultViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"result"];
     resultViewController.queryString = query;
+    resultViewController.slLuncher = self.slLuncher;
     [self.navigationController pushViewController:resultViewController animated:YES];
 }
 
@@ -96,59 +99,27 @@
 // 読み取り開始
 - (void)startDictation {
     [self.dictationController performSelector:@selector(startDictation)];
-
-//    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(onTimer:)];
-//    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-//    
-//    [self resetProgress];
-//    micImageView.hidden = NO;
-//    resultLabel.text = nil;
 }
 
 // 読み取り終了
 - (void)stopDictation {
     [self.dictationController performSelector:@selector(stopDictation)];
-    
-//    [displayLink invalidate];
-//    displayLink = nil;
-//    
-//    [self showWaitingServerProcessIndicator];
-//    micImageView.hidden = YES;
 }
 
 // 読み取りキャンセル
 // 今回は使わなくっていい
 - (void)cancelDictation {
     [self.dictationController performSelector:@selector(cancelDictation)];
-    
-//    [displayLink invalidate];
-//    displayLink = nil;
-//    
-//    [self resetProgress];
-//    micImageView.hidden = NO;
-//    resultLabel.text = nil;
 }
 
 // 文字列のプロセッシング
 - (void)processDictationText:(NSString *)text {
     self.queryStringField.text = text;
     
-//    if ([text hasSuffix:[NSString stringWithUTF8String:"を検索"]]) {
-//        text = [text substringToIndex:[text length] - 3];
-//        
-//        searchBar.text = text;
-//        
-//        NSURL *searchURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com/m?q=%@&ie=UTF-8&oe=UTF-8&client=safari",
-//                                                 [text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
-//        [webView loadRequest:[NSURLRequest requestWithURL:searchURL]];
-//    } else if ([text isEqualToString:[NSString stringWithUTF8String:"戻る"]]) {
-////        [webView goBack];
-//    } else if ([text isEqualToString:[NSString stringWithUTF8String:"進む"]]) {
-////        [webView goForward];
-//    }
-    
-    // 結果ページに遷移
-    [self pushResultScene:text];
+    if(![self.slLuncher execute:text]){
+        // 結果ページに遷移
+        [self pushResultScene:text];
+    }
 }
 
 - (void)dictationRecordingDidEnd:(NSNotification *)notification {

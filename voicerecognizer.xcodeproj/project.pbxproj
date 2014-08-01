@@ -23,6 +23,9 @@
 		0CAFD687198B31000025BF6A /* voicerecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD686198B31000025BF6A /* voicerecognizerTests.m */; };
 		0CAFD692198B34010025BF6A /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD691198B34010025BF6A /* ResultViewController.m */; };
 		0CAFD696198B6CB90025BF6A /* VNTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD695198B6CB90025BF6A /* VNTextInputView.m */; };
+		0CAFD69A198B8F8C0025BF6A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CAFD699198B8F8C0025BF6A /* README.md */; };
+		0CAFD69C198B94520025BF6A /* apps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0CAFD69B198B94520025BF6A /* apps.csv */; };
+		0CAFD69F198B945C0025BF6A /* SLLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD69E198B945C0025BF6A /* SLLauncher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		0CAFD694198B6CB90025BF6A /* VNTextInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNTextInputView.h; sourceTree = "<group>"; };
 		0CAFD695198B6CB90025BF6A /* VNTextInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNTextInputView.m; sourceTree = "<group>"; };
 		0CAFD697198B75BA0025BF6A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0CAFD699198B8F8C0025BF6A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0CAFD69B198B94520025BF6A /* apps.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apps.csv; sourceTree = "<group>"; };
+		0CAFD69D198B945C0025BF6A /* SLLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLauncher.h; sourceTree = "<group>"; };
+		0CAFD69E198B945C0025BF6A /* SLLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLauncher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +96,7 @@
 		0CAFD64F198B31000025BF6A = {
 			isa = PBXGroup;
 			children = (
+				0CAFD699198B8F8C0025BF6A /* README.md */,
 				0CAFD661198B31000025BF6A /* voicerecognizer */,
 				0CAFD680198B31000025BF6A /* voicerecognizerTests */,
 				0CAFD65A198B31000025BF6A /* Frameworks */,
@@ -120,6 +128,9 @@
 		0CAFD661198B31000025BF6A /* voicerecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				0CAFD69B198B94520025BF6A /* apps.csv */,
+				0CAFD69D198B945C0025BF6A /* SLLauncher.h */,
+				0CAFD69E198B945C0025BF6A /* SLLauncher.m */,
 				0CAFD694198B6CB90025BF6A /* VNTextInputView.h */,
 				0CAFD695198B6CB90025BF6A /* VNTextInputView.m */,
 				0CAFD66A198B31000025BF6A /* AppDelegate.h */,
@@ -242,6 +253,8 @@
 			files = (
 				0CAFD674198B31000025BF6A /* Images.xcassets in Resources */,
 				0CAFD666198B31000025BF6A /* InfoPlist.strings in Resources */,
+				0CAFD69C198B94520025BF6A /* apps.csv in Resources */,
+				0CAFD69A198B8F8C0025BF6A /* README.md in Resources */,
 				0CAFD66F198B31000025BF6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +276,7 @@
 			files = (
 				0CAFD672198B31000025BF6A /* ViewController.m in Sources */,
 				0CAFD66C198B31000025BF6A /* AppDelegate.m in Sources */,
+				0CAFD69F198B945C0025BF6A /* SLLauncher.m in Sources */,
 				0CAFD668198B31000025BF6A /* main.m in Sources */,
 				0CAFD696198B6CB90025BF6A /* VNTextInputView.m in Sources */,
 				0CAFD692198B34010025BF6A /* ResultViewController.m in Sources */,
