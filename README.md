@@ -5,7 +5,7 @@ Cortanaには負けられない。
 
 ## Members
 
-* @koji-ohki-1974  
+@koji-ohki-1974
 * Ryota Sokei  
 * Tetsuya Yoshida  
 
