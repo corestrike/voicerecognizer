@@ -3,7 +3,7 @@
 //  MIJSLauncher
 //
 //  Created by Koji Ohki on 2014/08/01.
-//  Copyright (c) 2014年 MIJS All rights reserved.
+//  Copyright (c) 2014 MIJS All rights reserved.
 //
 
 #import "SLLauncher.h"
@@ -140,6 +140,33 @@
         }
     }
     
+    return NO;
+}
+
+- (NSArray *)appList
+{
+    NSMutableArray *list = [NSMutableArray array];
+    for (NSDictionary *dic in _appList)
+    {
+        [list addObject: [dic objectForKey: @"name"]];
+    }
+
+    return list;
+}
+
+- (BOOL)executeApp: (NSString *)appName
+           withArg: (NSString *)arg
+{
+    for (NSDictionary *dic in _appList)
+    {
+        if ([appName isEqualToString: [dic objectForKey: @"name"]])
+        {
+            [self executeURLScheme: [dic objectForKey: @"scheme"]
+                          withArgs: arg, nil];
+        }
+        return YES;
+    }
+
     return NO;
 }
 

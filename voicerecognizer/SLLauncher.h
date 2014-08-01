@@ -3,7 +3,7 @@
 //  MIJSLauncher
 //
 //  Created by Koji Ohki on 2014/08/01.
-//  Copyright (c) 2014年 MIJS All rights reserved.
+//  Copyright (c) 2014 MIJS All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,6 +14,9 @@
 }
 - (id)init;
 - (BOOL)execute: (NSString *)phrase;
+- (NSArray *)appList;
+- (BOOL)executeApp: (NSString *)appName
+           withArg: (NSString *)arg;
 - (BOOL)addApp: (NSString *)appName
         withScheme: (NSString *)urlScheme
         byPhrase: (NSString *)phrase
