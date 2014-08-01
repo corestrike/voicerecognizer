@@ -14,7 +14,6 @@
 @implementation ResultViewController
 @synthesize queryString;
 @synthesize queryStringField;
-@synthesize slLuncher;
 @synthesize resultTable;
 @synthesize appsList;
 
@@ -38,17 +37,16 @@
     
     // UITableViewの謎の隙間を埋める処理
     // 舐めてるのか
-    self.resultTable.contentInset = UIEdgeInsetsMake(-15, 0, -15, 0);
+    self.resultTable.contentInset = UIEdgeInsetsMake(-20, 0, -20, 0);
     
     // 結果テーブルの設定
     [self.resultTable setDelegate:self];
     [self.resultTable setDataSource:self];
-
+    
     // 結果セットをリストに登録
     self.appsList = [[NSMutableArray alloc] init];
-    [self.appsList addObject:@"Googleで検索してみる"];
-    [self.appsList addObject:@"Yahoo!検索で検索してみる"];
-    [self.appsList addObject:@"なんでもいいから地図出せよ"];
+    [self.appsList addObject:@"hoge"];
+    [self.appsList addObject:@"xxxx"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +71,7 @@
     NSString* queryStr = self.queryStringField.text;
     
     // リストからアプリ情報を取得
-    NSString* appsInfo = [self.appsList objectAtIndex:num];
+    NSObject* appsInfo = [self.appsList objectAtIndex:num];
     
     // ToDo: URLスキーマの実装
     

@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "VNTextInputView.h"
-#import "SLLauncher.h"
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet VNTextInputView *textInputView;
 @property (weak, nonatomic) IBOutlet UITextField *queryStringField;
-@property (strong, nonatomic) SLLauncher *slLuncher;
 @end

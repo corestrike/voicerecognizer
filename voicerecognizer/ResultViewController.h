@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SLLauncher.h"
 
 @interface ResultViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *resultTable;
 @property (weak, nonatomic) IBOutlet UITextField *queryStringField;
-@property (strong, nonatomic) SLLauncher *slLuncher;
 @property (strong, nonatomic) NSString *queryString;
 @property (strong, nonatomic) NSMutableArray *appsList;
 @end
