@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VNTextInputView.h"
 
 @interface ViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet VNTextInputView *textInputView;
+@property (weak, nonatomic) IBOutlet UITextField *queryStringField;
 @end
