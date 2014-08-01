@@ -21,6 +21,8 @@
 		0CAFD67D198B31000025BF6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAFD65F198B31000025BF6A /* UIKit.framework */; };
 		0CAFD685198B31000025BF6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CAFD683198B31000025BF6A /* InfoPlist.strings */; };
 		0CAFD687198B31000025BF6A /* voicerecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD686198B31000025BF6A /* voicerecognizerTests.m */; };
+		0CAFD692198B34010025BF6A /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD691198B34010025BF6A /* ResultViewController.m */; };
+		0CAFD696198B6CB90025BF6A /* VNTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFD695198B6CB90025BF6A /* VNTextInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,11 @@
 		0CAFD682198B31000025BF6A /* voicerecognizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "voicerecognizerTests-Info.plist"; sourceTree = "<group>"; };
 		0CAFD684198B31000025BF6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CAFD686198B31000025BF6A /* voicerecognizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = voicerecognizerTests.m; sourceTree = "<group>"; };
+		0CAFD690198B34010025BF6A /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		0CAFD691198B34010025BF6A /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		0CAFD694198B6CB90025BF6A /* VNTextInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNTextInputView.h; sourceTree = "<group>"; };
+		0CAFD695198B6CB90025BF6A /* VNTextInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNTextInputView.m; sourceTree = "<group>"; };
+		0CAFD697198B75BA0025BF6A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 		0CAFD65A198B31000025BF6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CAFD697198B75BA0025BF6A /* QuartzCore.framework */,
 				0CAFD65B198B31000025BF6A /* Foundation.framework */,
 				0CAFD65D198B31000025BF6A /* CoreGraphics.framework */,
 				0CAFD65F198B31000025BF6A /* UIKit.framework */,
@@ -112,11 +120,15 @@
 		0CAFD661198B31000025BF6A /* voicerecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				0CAFD694198B6CB90025BF6A /* VNTextInputView.h */,
+				0CAFD695198B6CB90025BF6A /* VNTextInputView.m */,
 				0CAFD66A198B31000025BF6A /* AppDelegate.h */,
 				0CAFD66B198B31000025BF6A /* AppDelegate.m */,
 				0CAFD66D198B31000025BF6A /* Main.storyboard */,
 				0CAFD670198B31000025BF6A /* ViewController.h */,
 				0CAFD671198B31000025BF6A /* ViewController.m */,
+				0CAFD690198B34010025BF6A /* ResultViewController.h */,
+				0CAFD691198B34010025BF6A /* ResultViewController.m */,
 				0CAFD673198B31000025BF6A /* Images.xcassets */,
 				0CAFD662198B31000025BF6A /* Supporting Files */,
 			);
@@ -252,6 +264,8 @@
 				0CAFD672198B31000025BF6A /* ViewController.m in Sources */,
 				0CAFD66C198B31000025BF6A /* AppDelegate.m in Sources */,
 				0CAFD668198B31000025BF6A /* main.m in Sources */,
+				0CAFD696198B6CB90025BF6A /* VNTextInputView.m in Sources */,
+				0CAFD692198B34010025BF6A /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +470,7 @@
 				0CAFD68C198B31000025BF6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CAFD68D198B31000025BF6A /* Build configuration list for PBXNativeTarget "voicerecognizerTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +479,7 @@
 				0CAFD68F198B31000025BF6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
