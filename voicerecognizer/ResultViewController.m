@@ -45,10 +45,7 @@
     [self.resultTable setDataSource:self];
 
     // 結果セットをリストに登録
-    self.appsList = [[NSMutableArray alloc] init];
-    [self.appsList addObject:@"Googleで検索してみる"];
-    [self.appsList addObject:@"Yahoo!検索で検索してみる"];
-    [self.appsList addObject:@"なんでもいいから地図出せよ"];
+    self.appsList = [[NSMutableArray alloc] initWithArray:[self.slLuncher appList]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +73,7 @@
     NSString* appsInfo = [self.appsList objectAtIndex:num];
     
     // ToDo: URLスキーマの実装
-    
+    [self.slLuncher executeApp:appsInfo withArg:queryStr];
 }
 
 // 検索画面に戻る
