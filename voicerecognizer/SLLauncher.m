@@ -146,9 +146,15 @@
 - (NSArray *)appList
 {
     NSMutableArray *list = [NSMutableArray array];
+    NSMutableSet *set = [NSMutableSet set];
     for (NSDictionary *dic in _appList)
     {
-        [list addObject: [dic objectForKey: @"name"]];
+        NSString *appName = [dic objectForKey: @"name"];
+        if (![set containsObject: appName])
+        {
+            [set addObject: appName];
+            [list addObject: appName];
+        }
     }
 
     return list;

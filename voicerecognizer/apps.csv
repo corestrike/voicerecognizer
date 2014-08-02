@@ -1,9 +1,9 @@
 google,x-web-search://google?%0,%を検索
 google,x-web-search://google?%0,%を調べて
 電話,tel:%0,%に電話
-メール,message:,メール確認
+メール確認,message:,メール確認
 メール,mailto:%0,%にメール
 yahoo,x-web-search://yahoo/?%0,%をヤフー検索
-マップ,maps:q=%0,%の場所
-マップ,maps://?daddr=%0,%への経路
+マップ,comgooglemaps://?q=%0,%の場所
+マップ（経路）,comgooglemaps://?daddr=%0,%への経路
 Apple Map,http://maps.apple.com/?q=%0,%の地図
