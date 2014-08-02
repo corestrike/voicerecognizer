@@ -163,14 +163,15 @@
 - (BOOL)executeApp: (NSString *)appName
            withArg: (NSString *)arg
 {
+    NSLog(@"SLLauncer#executeApp: [%@] withArg: [%@]", appName, arg);
     for (NSDictionary *dic in _appList)
     {
         if ([appName isEqualToString: [dic objectForKey: @"name"]])
         {
             [self executeURLScheme: [dic objectForKey: @"scheme"]
                           withArgs: arg, nil];
+            return YES;
         }
-        return YES;
     }
 
     return NO;
